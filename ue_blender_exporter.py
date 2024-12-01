@@ -134,7 +134,22 @@ class SimplePanel(bpy.types.Panel):
         # Export Button
         col.operator(SimpleOperator.bl_idname, text="Export")
 
+class CreditsPanel(bpy.types.Panel):
+    bl_label = "Credits"
+    bl_idname = "PT_CreditsPanel"
+    bl_space_type = 'VIEW_3D'
+    bl_region_type = 'UI'
+    bl_category = 'UE5 Asset Kit Exporter'
+
+    def draw(self, context):
+        layout = self.layout
+        layout.label(text="Mass Export FBX Addon")
+        layout.label(text="Created by: ChinyONE")
+        layout.label(text="GitHub: github.com/Chinyeins")
+
+
 def register():
+    bpy.utils.register_class(CreditsPanel)
     bpy.utils.register_class(SetExportPathOperator)
     bpy.utils.register_class(SimpleOperator)
     bpy.utils.register_class(SimplePanel)
@@ -153,6 +168,7 @@ def register():
     )
 
 def unregister():
+    bpy.utils.unregister_class(CreditsPanel)
     bpy.utils.unregister_class(SimplePanel)
     bpy.utils.unregister_class(SimpleOperator)
     bpy.utils.unregister_class(SetExportPathOperator)
