@@ -140,6 +140,7 @@ class CreditsPanel(bpy.types.Panel):
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
     bl_category = 'UE5 Asset Kit Exporter'
+    bl_options = {'DEFAULT_CLOSED'}
 
     def draw(self, context):
         layout = self.layout
@@ -149,10 +150,10 @@ class CreditsPanel(bpy.types.Panel):
 
 
 def register():
-    bpy.utils.register_class(CreditsPanel)
     bpy.utils.register_class(SetExportPathOperator)
     bpy.utils.register_class(SimpleOperator)
     bpy.utils.register_class(SimplePanel)
+    bpy.utils.register_class(CreditsPanel)
     
     bpy.types.Scene.simple_export_preset = bpy.props.EnumProperty(
         name="Export Preset",
