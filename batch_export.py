@@ -77,12 +77,17 @@ class SimpleOperator(bpy.types.Operator):
     )
 
     def execute(self, context):
+        export_path = bpy.path.abspath(context.scene.simple_export_path)
         exporter = Exporter(
             os.path.dirname(bpy.data.filepath),
             context.scene.simple_export_preset,
             bpy.path.abspath(context.scene.simple_export_path)
         )
         exporter.export()
+
+        # Show a completion message
+        self.report({'INFO'}, f"Export completed! Files saved to: {export_path}")
+
         return {'FINISHED'}
 
 class SimplePanel(bpy.types.Panel):
