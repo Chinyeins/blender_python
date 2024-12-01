@@ -27,7 +27,7 @@ class Exporter:
         collisions = []
         base_name = base_object.name
         for obj in bpy.data.objects:
-            if obj.name.startswith(tuple(self.valid_prefixes)) and obj.name.endswith(base_name):
+             if obj.name.startswith(tuple(self.valid_prefixes)) and base_name in obj.name:
                 collisions.append(obj)
         return collisions
 
