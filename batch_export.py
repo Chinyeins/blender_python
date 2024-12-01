@@ -2,7 +2,7 @@ bl_info = {
     "name": "Mass Export FBX with Collisions for Blender | Unreal Engine",
     "author": "Christopher-Robin Fey",
     "version": (1, 0, 0),
-    "blender": (3, 0, 0),
+    "blender": (4, 0, 0),
     "location": "3D View > Tool Shelf > UE5 Asset Kit Exporter",
     "description": "Export selected objects and their collision meshes as FBX files for Unreal Engine.",
     "warning": "",

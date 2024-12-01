@@ -18,12 +18,12 @@ This Blender addon simplifies the process of exporting selected objects and thei
 
 1. **Download the Addon**:
    - Clone or download the repository to your computer.
-   - Save the `mass_export_fbx_addon.py` file.
+   - Save the `ue_mesh_batch_export_blender.zip` file.
 
 2. **Install in Blender**:
    - Open Blender.
    - Navigate to **Edit > Preferences > Add-ons**.
-   - Click **Install...** and select the `mass_export_fbx_addon.py` file.
+   - Click **Install from Disk** and select the `ue_mesh_batch_export_blender.zip` file.
    - Enable the addon by checking the checkbox next to its name.
 
 3. **Save Preferences**:
