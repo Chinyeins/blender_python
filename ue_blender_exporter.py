@@ -41,6 +41,8 @@ class Exporter:
         obj.location = original_location
 
     def export(self):
+        """Reset cursor locaiton to world origin before export"""
+        bpy.context.scene.cursor.location = (0.0, 0.0, 0.0)
         """Export selected objects with their collision meshes."""
         cursor_location = bpy.context.scene.cursor.location.copy()
 
